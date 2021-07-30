@@ -1,0 +1,38 @@
+1)  Посмотреть где я  									$ pwd
+2)  Создать папку    									$ mkdir hw1
+3)  Зайти в папку     									$ cd hw1
+4)  Создать 3 папки   									$ mkdir dir1 dir2 dir3
+5)  Зайти в любоую папку 								$ cd dir2
+6)  Создать 5 файлов (3 txt, 2 json)  							$ touch file1.txt file2.txt file3.txt file4.json file5.json
+7)  Создать 3 папки   									$ mkdir 'папка 1' 'папка 2' 'папка 3'
+8)  Вывести список содержимого папки  							$ ls -la
+9)  Открыть любой txt файл  								$ cat file1.txt
+10) Написать туда что-нибудь, любой текст 						$ vim file1.txt
+11) Сохранить и выйти 									:wq
+12) Выйти из папки на уровень выше 							$ cd ..
+13) Переместить любые 2 файла, которые вы создали, в любую другую папку 		$ mv dir2/file1.txt dir2/file2.txt dir1
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку 		$ cp dir1/file1.txt dir1/file2.txt dir3
+15) Найти файл по имени 								$ find -name '*.json'			
+16) Просмотреть содержимое в реальном времени (команда grep) изучите как она работает.	$ grep -v 111 dir2/1.txt
+17) Вывести несколько первых строк из текстового файла					$ head -3 dir2/1.txt
+18) Вывести несколько последних строк из текстового файла				$ tail -2 dir2/1.txt
+19) Просмотреть содержимое длинного файла (команда less) изучите как она работает.	$ less dir2/1.txt
+20) Вывести дату и время								$ date +"%H:%M:%S  %d/%m/%Y"
+=========
+
+Задание *
+1) Отправить http запрос на сервер							$ curl https://api.quarantine.country/api/v1/regions							
+https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 		$ chmod +x ./script
+											$ ./script
+
+#!/bin/bash
+
+mkdir script
+cd script
+mkdir 1 2 3
+cd 1
+touch q.txt w.txt e.txt a.json s.json
+mkdir 0 9 8
+ls -la
+mv q.txt w.txt 8
