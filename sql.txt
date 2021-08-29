@@ -253,7 +253,7 @@ INNER JOIN product ON pc.model = product.model
 WHERE pc.speed >= 750 AND maker IN (SELECT maker  
 FROM laptop 
 INNER JOIN product ON laptop.model = product.model 
-WHERE laptop.speed >= 750)
+WHERE laptop.speed >= 750)vvv
 
 
 
