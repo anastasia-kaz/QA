@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<?charles serialisation-version='2.0' ?>
+<rewriteSet-array>
+  <rewriteSet>
+    <active>true</active>
+    <name>ex6_user_info_2</name>
+    <hosts>
+      <locationPatterns>
+        <locationMatch>
+          <location>
+            <protocol>http</protocol>
+            <host>162.55.220.72</host>
+            <port>5005</port>
+            <path>/user_info_2</path>
+          </location>
+          <enabled>true</enabled>
+        </locationMatch>
+      </locationPatterns>
+    </hosts>
+    <rules>
+      <rewriteRule>
+        <active>true</active>
+        <ruleType>7</ruleType>
+        <matchValue></matchValue>
+        <matchHeaderRegex>false</matchHeaderRegex>
+        <matchValueRegex>false</matchValueRegex>
+        <matchRequest>false</matchRequest>
+        <matchResponse>true</matchResponse>
+        <newValue>{     &quot;person&quot;: {         &quot;u_age&quot;: 20,         &quot;u_name&quot;: [             &quot;nastya&quot;,             350,             20         ],         &quot;u_salary_5_years&quot;: 1470.0     },     &quot;qa_salary_after_1.5_month&quot;: 1155.0,     &quot;qa_salary_after_12_months&quot;: 945.0000000000001,     &quot;qa_salary_after_3.5_years&quot;: 100,     &quot;qa_salary_after_6_months&quot;: 700,     &quot;start_qa_salary&quot;: 350 }</newValue>
+        <newHeaderRegex>false</newHeaderRegex>
+        <newValueRegex>false</newValueRegex>
+        <matchWholeValue>true</matchWholeValue>
+        <caseSensitive>false</caseSensitive>
+        <replaceType>2</replaceType>
+      </rewriteRule>
+    </rules>
+  </rewriteSet>
+</rewriteSet-array>
